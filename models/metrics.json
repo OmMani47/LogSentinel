@@ -1,0 +1,1008 @@
+{
+  "disclaimer": "Scores are from a later time slice of a synthetic teaching log. They are not an estimate of accuracy on real authentication logs.",
+  "seed": 42,
+  "split": "time",
+  "fit_end": "2026-01-13T00:00:00Z",
+  "validation_end": "2026-01-15T00:00:00Z",
+  "test_end": "2026-01-19T00:00:00Z",
+  "rows": 1080,
+  "fit_rows": 589,
+  "validation_rows": 184,
+  "test_rows": 307,
+  "detector": "rules_or_isolation_forest",
+  "if_threshold": 0.084746,
+  "validation_operating": {
+    "f1": 0.984615,
+    "precision": 0.969697,
+    "recall": 1.0,
+    "rules_only_f1": 0.653061,
+    "rules_only_precision": 0.941176,
+    "rules_only_recall": 0.5
+  },
+  "thresholds": {
+    "brute_fails_15m": 8,
+    "spray_users_15m": 10,
+    "success_after_failures_band": [
+      6,
+      7
+    ],
+    "travel_speed_kmh": 800.0
+  },
+  "binary_test": {
+    "precision": 0.911111,
+    "recall": 0.89781,
+    "f1": 0.904412,
+    "true_positives": 123,
+    "false_positives": 12,
+    "false_negatives": 14,
+    "true_negatives": 158,
+    "support_attack": 137,
+    "support_benign": 170
+  },
+  "rules_only_binary": {
+    "precision": 0.898551,
+    "recall": 0.452555,
+    "f1": 0.601942,
+    "true_positives": 62,
+    "false_positives": 7,
+    "false_negatives": 75,
+    "true_negatives": 163,
+    "support_attack": 137,
+    "support_benign": 170
+  },
+  "isolation_forest_only_binary": {
+    "precision": 0.943548,
+    "recall": 0.854015,
+    "f1": 0.896552,
+    "true_positives": 117,
+    "false_positives": 7,
+    "false_negatives": 20,
+    "true_negatives": 163,
+    "support_attack": 137,
+    "support_benign": 170
+  },
+  "logistic_baseline_binary": {
+    "precision": 0.842767,
+    "recall": 0.978102,
+    "f1": 0.905405,
+    "true_positives": 134,
+    "false_positives": 25,
+    "false_negatives": 3,
+    "true_negatives": 145,
+    "support_attack": 137,
+    "support_benign": 170
+  },
+  "per_attack_type": {
+    "brute_force": {
+      "precision": 1.0,
+      "recall": 0.45,
+      "f1": 0.62069,
+      "support": 40,
+      "any_alert_recall": 0.8
+    },
+    "password_spray": {
+      "precision": 1.0,
+      "recall": 0.388889,
+      "f1": 0.56,
+      "support": 36,
+      "any_alert_recall": 1.0
+    },
+    "credential_stuffing": {
+      "precision": 1.0,
+      "recall": 0.558824,
+      "f1": 0.716981,
+      "support": 34,
+      "any_alert_recall": 1.0
+    },
+    "impossible_travel": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2,
+      "any_alert_recall": 1.0
+    },
+    "unusual_geography": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "support": 2,
+      "any_alert_recall": 1.0
+    },
+    "off_hours": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "support": 2,
+      "any_alert_recall": 1.0
+    },
+    "new_device": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "support": 3,
+      "any_alert_recall": 1.0
+    },
+    "success_after_failures": {
+      "precision": 1.0,
+      "recall": 0.125,
+      "f1": 0.222222,
+      "support": 16,
+      "any_alert_recall": 0.75
+    },
+    "stealth_takeover": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 2,
+      "any_alert_recall": 0.0
+    }
+  },
+  "logistic_per_attack_type": {
+    "brute_force": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "support": 40
+    },
+    "password_spray": {
+      "precision": 1.0,
+      "recall": 0.861111,
+      "f1": 0.925373,
+      "support": 36
+    },
+    "credential_stuffing": {
+      "precision": 0.62963,
+      "recall": 1.0,
+      "f1": 0.772727,
+      "support": 34
+    },
+    "impossible_travel": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 2
+    },
+    "unusual_geography": {
+      "precision": 0.666667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "support": 2
+    },
+    "off_hours": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "support": 2
+    },
+    "new_device": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.666667,
+      "support": 3
+    },
+    "success_after_failures": {
+      "precision": 0.224138,
+      "recall": 0.8125,
+      "f1": 0.351351,
+      "support": 16
+    },
+    "stealth_takeover": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.666667,
+      "support": 2
+    }
+  },
+  "campaigns": [
+    {
+      "campaign_id": "brute-test-1",
+      "attack_type": "brute_force",
+      "events": 16,
+      "alerts": 16,
+      "rule_alerts": 9,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "brute-test-2",
+      "attack_type": "brute_force",
+      "events": 16,
+      "alerts": 16,
+      "rule_alerts": 9,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "geo-test-1",
+      "attack_type": "unusual_geography",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "geo-test-2",
+      "attack_type": "unusual_geography",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "newdev-test-1",
+      "attack_type": "new_device",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "newdev-test-2",
+      "attack_type": "new_device",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "newdev-test-3",
+      "attack_type": "new_device",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "offhours-test-1",
+      "attack_type": "off_hours",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "offhours-test-2",
+      "attack_type": "off_hours",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "slow-brute-test-1",
+      "attack_type": "brute_force",
+      "events": 8,
+      "alerts": 0,
+      "rule_alerts": 0,
+      "detected": false,
+      "detected_by_rule": false
+    },
+    {
+      "campaign_id": "spray-test-1",
+      "attack_type": "password_spray",
+      "events": 16,
+      "alerts": 16,
+      "rule_alerts": 7,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "spray-test-2",
+      "attack_type": "password_spray",
+      "events": 16,
+      "alerts": 16,
+      "rule_alerts": 7,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "stealth-test-1",
+      "attack_type": "stealth_takeover",
+      "events": 2,
+      "alerts": 0,
+      "rule_alerts": 0,
+      "detected": false,
+      "detected_by_rule": false
+    },
+    {
+      "campaign_id": "stuff-dist-test-1",
+      "attack_type": "credential_stuffing",
+      "events": 12,
+      "alerts": 12,
+      "rule_alerts": 4,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "stuff-test-1",
+      "attack_type": "credential_stuffing",
+      "events": 22,
+      "alerts": 22,
+      "rule_alerts": 15,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "success-test-1",
+      "attack_type": "success_after_failures",
+      "events": 8,
+      "alerts": 5,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "success-test-2",
+      "attack_type": "success_after_failures",
+      "events": 8,
+      "alerts": 7,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "tiny-spray-test-1",
+      "attack_type": "password_spray",
+      "events": 4,
+      "alerts": 4,
+      "rule_alerts": 0,
+      "detected": true,
+      "detected_by_rule": false
+    },
+    {
+      "campaign_id": "travel-test-1",
+      "attack_type": "impossible_travel",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    },
+    {
+      "campaign_id": "travel-test-2",
+      "attack_type": "impossible_travel",
+      "events": 1,
+      "alerts": 1,
+      "rule_alerts": 1,
+      "detected": true,
+      "detected_by_rule": true
+    }
+  ],
+  "campaign_recall": 0.9,
+  "campaigns_detected": 18,
+  "campaigns_total": 20,
+  "known_misses": [
+    {
+      "campaign_id": "slow-brute-test-1",
+      "attack_type": "brute_force",
+      "events": 8,
+      "alerts": 0,
+      "rule_alerts": 0,
+      "detected": false,
+      "detected_by_rule": false
+    },
+    {
+      "campaign_id": "stealth-test-1",
+      "attack_type": "stealth_takeover",
+      "events": 2,
+      "alerts": 0,
+      "rule_alerts": 0,
+      "detected": false,
+      "detected_by_rule": false
+    }
+  ],
+  "rule_misses": [
+    {
+      "campaign_id": "slow-brute-test-1",
+      "attack_type": "brute_force",
+      "events": 8
+    },
+    {
+      "campaign_id": "stealth-test-1",
+      "attack_type": "stealth_takeover",
+      "events": 2
+    },
+    {
+      "campaign_id": "tiny-spray-test-1",
+      "attack_type": "password_spray",
+      "events": 4
+    }
+  ],
+  "false_positive_alerts": [
+    {
+      "event_id": "evt-000854",
+      "campaign_id": "fp-laptop-test-1",
+      "scenario": "false_positive",
+      "username": "hiro.tanaka@northwind.example",
+      "primary_reason": "new_device",
+      "lr_label": "new_device"
+    },
+    {
+      "event_id": "evt-000891",
+      "campaign_id": "fp-oncall-test-1",
+      "scenario": "false_positive",
+      "username": "leo.bergstrom@northwind.example",
+      "primary_reason": "off_hours",
+      "lr_label": "off_hours"
+    },
+    {
+      "event_id": "evt-000899",
+      "campaign_id": "",
+      "scenario": "routine",
+      "username": "theo.martin@students.northwind.example",
+      "primary_reason": "untyped_anomaly",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001011",
+      "campaign_id": "fp-laptop-test-3",
+      "scenario": "false_positive",
+      "username": "ines.moreau@northwind.example",
+      "primary_reason": "new_device",
+      "lr_label": "new_device"
+    },
+    {
+      "event_id": "evt-001016",
+      "campaign_id": "fp-laptop-test-2",
+      "scenario": "false_positive",
+      "username": "leo.bergstrom@northwind.example",
+      "primary_reason": "new_device",
+      "lr_label": "new_device"
+    },
+    {
+      "event_id": "evt-001024",
+      "campaign_id": "fp-annex-test-1",
+      "scenario": "false_positive",
+      "username": "elena.vasquez@northwind.example",
+      "primary_reason": "unusual_geography",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001027",
+      "campaign_id": "",
+      "scenario": "benign_travel",
+      "username": "ada.okonkwo@northwind.example",
+      "primary_reason": "untyped_anomaly",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001028",
+      "campaign_id": "fp-travel-test-1",
+      "scenario": "false_positive",
+      "username": "chioma.adebayo@northwind.example",
+      "primary_reason": "unusual_geography",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001039",
+      "campaign_id": "fp-oncall-test-2",
+      "scenario": "false_positive",
+      "username": "ben.cho@northwind.example",
+      "primary_reason": "off_hours",
+      "lr_label": "off_hours"
+    },
+    {
+      "event_id": "evt-001066",
+      "campaign_id": "",
+      "scenario": "routine",
+      "username": "elena.vasquez@northwind.example",
+      "primary_reason": "untyped_anomaly",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001069",
+      "campaign_id": "",
+      "scenario": "routine",
+      "username": "chioma.adebayo@northwind.example",
+      "primary_reason": "untyped_anomaly",
+      "lr_label": "benign"
+    },
+    {
+      "event_id": "evt-001070",
+      "campaign_id": "",
+      "scenario": "routine",
+      "username": "kira.novak@northwind.example",
+      "primary_reason": "untyped_anomaly",
+      "lr_label": "benign"
+    }
+  ],
+  "if_only_alerts": {
+    "events": 66,
+    "true_positives": 61,
+    "false_positives": 5
+  },
+  "logistic_top_weights": {
+    "benign": {
+      "toward_class": [
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": 0.812247
+        },
+        {
+          "feature": "is_weekend",
+          "coefficient": 0.638557
+        },
+        {
+          "feature": "distinct_ua_ip_15m",
+          "coefficient": 0.469684
+        },
+        {
+          "feature": "distinct_users_ip_60m",
+          "coefficient": 0.261871
+        },
+        {
+          "feature": "distinct_users_ip_15m",
+          "coefficient": 0.259757
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "fail_count_user_60m",
+          "coefficient": -1.088385
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": -0.999313
+        },
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": -0.60113
+        },
+        {
+          "feature": "fail_count_ip_60m",
+          "coefficient": -0.569939
+        },
+        {
+          "feature": "unseen_device",
+          "coefficient": -0.44699
+        }
+      ]
+    },
+    "brute_force": {
+      "toward_class": [
+        {
+          "feature": "fail_count_user_60m",
+          "coefficient": 0.990013
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": 0.532483
+        },
+        {
+          "feature": "fail_count_ip_60m",
+          "coefficient": 0.472574
+        },
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": 0.464087
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": 0.305843
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "prior_successes",
+          "coefficient": -1.768304
+        },
+        {
+          "feature": "hour_cos",
+          "coefficient": -1.222875
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": -0.56912
+        },
+        {
+          "feature": "unseen_device",
+          "coefficient": -0.476742
+        },
+        {
+          "feature": "unseen_ip",
+          "coefficient": -0.38347
+        }
+      ]
+    },
+    "credential_stuffing": {
+      "toward_class": [
+        {
+          "feature": "unseen_ua",
+          "coefficient": 1.108083
+        },
+        {
+          "feature": "distinct_ua_ip_15m",
+          "coefficient": 0.930165
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": 0.770412
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": 0.703645
+        },
+        {
+          "feature": "prior_successes",
+          "coefficient": 0.654964
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "unseen_site",
+          "coefficient": -0.454285
+        },
+        {
+          "feature": "geo_speed_kmh",
+          "coefficient": -0.29362
+        },
+        {
+          "feature": "distinct_users_ip_15m",
+          "coefficient": -0.046081
+        },
+        {
+          "feature": "distinct_users_ip_60m",
+          "coefficient": -0.04606
+        },
+        {
+          "feature": "fails_before_success_15m",
+          "coefficient": -0.039542
+        }
+      ]
+    },
+    "impossible_travel": {
+      "toward_class": [
+        {
+          "feature": "geo_speed_kmh",
+          "coefficient": 0.847391
+        },
+        {
+          "feature": "is_weekend",
+          "coefficient": 0.212269
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": 0.118616
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": 0.074745
+        },
+        {
+          "feature": "unseen_site",
+          "coefficient": 0.06936
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": -0.142222
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": -0.131313
+        },
+        {
+          "feature": "unseen_device",
+          "coefficient": -0.12746
+        },
+        {
+          "feature": "unseen_ua",
+          "coefficient": -0.115569
+        },
+        {
+          "feature": "fail_count_user_15m",
+          "coefficient": -0.036835
+        }
+      ]
+    },
+    "new_device": {
+      "toward_class": [
+        {
+          "feature": "unseen_ua",
+          "coefficient": 0.93563
+        },
+        {
+          "feature": "unseen_device",
+          "coefficient": 0.873437
+        },
+        {
+          "feature": "prior_successes",
+          "coefficient": 0.684402
+        },
+        {
+          "feature": "hour_sin",
+          "coefficient": 0.128064
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": -0.014081
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": -0.571222
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": -0.481963
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": -0.479714
+        },
+        {
+          "feature": "unseen_ip",
+          "coefficient": -0.448398
+        },
+        {
+          "feature": "hour_cos",
+          "coefficient": -0.384726
+        }
+      ]
+    },
+    "off_hours": {
+      "toward_class": [
+        {
+          "feature": "hour_deviation",
+          "coefficient": 1.653357
+        },
+        {
+          "feature": "hour_cos",
+          "coefficient": 0.642696
+        },
+        {
+          "feature": "hour_sin",
+          "coefficient": 0.535656
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": -0.005881
+        },
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": -0.008846
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": -0.42242
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": -0.345425
+        },
+        {
+          "feature": "prior_successes",
+          "coefficient": -0.183065
+        },
+        {
+          "feature": "fail_count_user_15m",
+          "coefficient": -0.144288
+        },
+        {
+          "feature": "fail_count_user_60m",
+          "coefficient": -0.137006
+        }
+      ]
+    },
+    "password_spray": {
+      "toward_class": [
+        {
+          "feature": "hour_sin",
+          "coefficient": 0.863887
+        },
+        {
+          "feature": "unseen_ip",
+          "coefficient": 0.737862
+        },
+        {
+          "feature": "unseen_device",
+          "coefficient": 0.697825
+        },
+        {
+          "feature": "distinct_users_ip_15m",
+          "coefficient": 0.517404
+        },
+        {
+          "feature": "distinct_users_ip_60m",
+          "coefficient": 0.516773
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "unseen_ua",
+          "coefficient": -0.82042
+        },
+        {
+          "feature": "distinct_ua_ip_15m",
+          "coefficient": -0.667126
+        },
+        {
+          "feature": "hour_deviation",
+          "coefficient": -0.536632
+        },
+        {
+          "feature": "hour_cos",
+          "coefficient": -0.402122
+        },
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": -0.274412
+        }
+      ]
+    },
+    "stealth_takeover": {
+      "toward_class": [
+        {
+          "feature": "hour_cos",
+          "coefficient": 1.572678
+        },
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": 0.523435
+        },
+        {
+          "feature": "fails_before_success_15m",
+          "coefficient": 0.418284
+        },
+        {
+          "feature": "hour_sin",
+          "coefficient": 0.094477
+        },
+        {
+          "feature": "distinct_ips_user_60m",
+          "coefficient": -0.009735
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "hour_deviation",
+          "coefficient": -1.616799
+        },
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": -0.56076
+        },
+        {
+          "feature": "prior_successes",
+          "coefficient": -0.391102
+        },
+        {
+          "feature": "is_weekend",
+          "coefficient": -0.305192
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": -0.208924
+        }
+      ]
+    },
+    "success_after_failures": {
+      "toward_class": [
+        {
+          "feature": "prior_successes",
+          "coefficient": 0.926113
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": 0.717705
+        },
+        {
+          "feature": "hour_deviation",
+          "coefficient": 0.707418
+        },
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": 0.585094
+        },
+        {
+          "feature": "fail_count_user_15m",
+          "coefficient": 0.482825
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "hour_sin",
+          "coefficient": -1.309996
+        },
+        {
+          "feature": "geo_distance_km",
+          "coefficient": -0.681873
+        },
+        {
+          "feature": "geo_speed_kmh",
+          "coefficient": -0.304576
+        },
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": -0.272172
+        },
+        {
+          "feature": "is_weekend",
+          "coefficient": -0.255436
+        }
+      ]
+    },
+    "unusual_geography": {
+      "toward_class": [
+        {
+          "feature": "geo_distance_km",
+          "coefficient": 0.806795
+        },
+        {
+          "feature": "unseen_site",
+          "coefficient": 0.624333
+        },
+        {
+          "feature": "minutes_since_prev_success",
+          "coefficient": 0.469716
+        },
+        {
+          "feature": "unseen_ip",
+          "coefficient": 0.455041
+        },
+        {
+          "feature": "prior_successes",
+          "coefficient": 0.320348
+        }
+      ],
+      "against_class": [
+        {
+          "feature": "unseen_device",
+          "coefficient": -0.454784
+        },
+        {
+          "feature": "fail_ratio_ip_15m",
+          "coefficient": -0.415174
+        },
+        {
+          "feature": "unseen_ua",
+          "coefficient": -0.395546
+        },
+        {
+          "feature": "hour_sin",
+          "coefficient": -0.391053
+        },
+        {
+          "feature": "is_failure",
+          "coefficient": -0.375528
+        }
+      ]
+    }
+  },
+  "benign_medians": {
+    "fail_count_user_15m": 0.0,
+    "fail_count_user_60m": 0.0,
+    "fail_count_ip_15m": 0.0,
+    "fail_count_ip_60m": 0.0,
+    "distinct_users_ip_15m": 1.0,
+    "distinct_users_ip_60m": 1.0,
+    "distinct_ips_user_60m": 1.0,
+    "distinct_ua_ip_15m": 1.0,
+    "fail_ratio_ip_15m": 0.0,
+    "hour_sin": -0.087156,
+    "hour_cos": -0.726375,
+    "is_weekend": 0.0,
+    "hour_deviation": 2.439118,
+    "prior_successes": 7.0,
+    "unseen_ua": 0.0,
+    "unseen_device": 0.0,
+    "unseen_ip": 0.0,
+    "unseen_site": 0.0,
+    "geo_distance_km": 0.0,
+    "geo_speed_kmh": 0.0,
+    "minutes_since_prev_success": 380.0,
+    "is_failure": 0.0,
+    "fails_before_success_15m": 0.0
+  }
+}
